@@ -32,7 +32,7 @@ public class PageBase {
     protected static String downloadFilepath = System.getProperty("user.dir")+File.separator+"src"+File.separator+"test"+File.separator+"resources"+File.separator+"fileDownload";
     protected static String uploadFilepath = System.getProperty("user.dir")+File.separator+"src"+File.separator+"test"+File.separator+"resources"+File.separator+"fileUpload";
     public static String VideoReording_FOLDER = System.getProperty("user.dir") + "/src/test/resources/VideoReording/";
-    protected static String osType = System.getProperty("os.type", Constants.UBUNTU);
+    protected static String osType = System.getProperty("os.type", Constants.WINDOWS);
     protected static String driverType = System.getProperty("browser.type", Constants.CHROME);
 
     /**

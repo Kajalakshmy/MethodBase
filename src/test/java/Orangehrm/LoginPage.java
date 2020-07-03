@@ -41,6 +41,7 @@ public class LoginPage extends PageBase {
   public static void getLoginAlert() {
     MethodBase.isDisplayed_ById("spanMessage");
   }
+
 }
 
 
