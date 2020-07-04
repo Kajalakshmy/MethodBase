@@ -1,5 +1,7 @@
 package controllers;
 
+
+import classpack.LoginPage;
 import org.apache.log4j.Logger;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -29,6 +31,12 @@ public class TestBase {
             e.printStackTrace();
         }
         LOGGER.info("Browser Initiated");
+
+        LoginPage.isLoginPageDisplay();
+        LoginPage.setUserName("Admin");
+        LoginPage.setPassword("admin123");
+        LoginPage.clickLogin();
+
     }
 
     @BeforeMethod(alwaysRun = true)

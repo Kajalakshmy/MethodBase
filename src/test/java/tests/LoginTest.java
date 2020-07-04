@@ -1,20 +1,22 @@
 package tests;
 
-import Orangehrm.LoginPage;
+import classpack.LoginPage;
 import controllers.TestBase;
 import org.apache.log4j.Logger;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+import testData.LoginData;
 
 public class LoginTest extends TestBase {
    private static final Logger LOGGER = Logger.getLogger(LoginTest.class);
-    @Test(priority = 0)
-    public void LoginCorrect(){
+    @Test(priority = 0,groups = "REGRESSION",dataProviderClass = LoginData.class, dataProvider = "OrangeHRMLogin")
 
-        LoginPage.setUserName();
-        LoginPage.setPassword();
+    public void LoginCorrect(String uname, String password){
+        softAssert = new SoftAssert();
+        LoginPage.setUserName("Admin");
+        LoginPage.setPassword("admin123");
         LoginPage.clickLogin();
 
-      //  LoginPage.isLoginPageDisplay();
-      //  LoginPage.getLoginAlert();
+
     }
     }

@@ -21,6 +21,8 @@ import java.util.ArrayList;
 import static controllers.PageBase.getDriver;
 
 public class MethodBase extends Constants {
+    public static void setText_ByID(String empStatus_name) {
+    }
 
 
 
